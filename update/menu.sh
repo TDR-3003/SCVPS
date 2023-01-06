@@ -12,7 +12,7 @@ echo -e "\033[0;36m==================================================\033[m"
 echo -e "\033[0;33m  1. •SSH & OpenVPN MENU\033[0;33m
 echo -e "\033[1;33m  2. •VMESS MENU\033[1;33mm"
 echo -e "\033[0;33m  3. •VLESS MENU\033[0;33m"
-echo -e "\033[0;33m  4. •XRAY TROJAN MENU\033[1;33mm"
+echo -e "\033[1;33m  4. •XRAY TROJAN MENU\033[1;33mm"
 echo -e "\033[0;33m  5. •WIREGUARD MENU\033[0;33m"
 echo -e "\033[1;33m  6. •SHADOWSOCKS MENU\033[1;33mm"
 echo -e "\033[0;33m  7. •SHADOWSOCKSR MENU\033[0;33m"
