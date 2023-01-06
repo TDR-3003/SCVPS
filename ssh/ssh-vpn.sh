@@ -374,7 +374,7 @@ cd /usr/bin
 wget -O addhost "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/addhost.sh"
 wget -O slhost "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/slhost.sh"
 wget -O about "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/about.sh"
-wget -O menu "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/update/menu.sh"
+wget -O menu "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/menu.sh"
 wget -O addssh "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/addssh.sh"
 wget -O trialssh "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/trialssh.sh"
 wget -O delssh "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/delssh.sh"
