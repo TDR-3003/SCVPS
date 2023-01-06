@@ -52,29 +52,29 @@ exit 0
 fi
 mkdir /var/lib/crot;
 echo "IP=" >> /var/lib/tarapkuhing/ipvps.conf
-wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
 #install xray
-wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/xray/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
 #install ssh ovpn
-wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 #install sstp
-wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/sstp/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
-wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssr/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 #install shadowsoks
-wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/shadowsocks/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
-wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/wireguard/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install L2TP
-wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ipsec/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 #install set_ber
-wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 # Websocket
-wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/edu.sh && chmod +x edu.sh && ./edu.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/websocket/edu.sh && chmod +x edu.sh && ./edu.sh
 # Ohp Server
-wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ohp/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 # Install SlowDNS
-wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/SLDNS/install-sldns && chmod +x install-sldns && ./install-sldns
+wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/SLDNS/install-sldns && chmod +x install-sldns && ./install-sldns
 # Informasi IP Saya dan Semua Port TCP UDP
 # wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ipsaya.sh && chmod +x ipsaya.sh
 #
