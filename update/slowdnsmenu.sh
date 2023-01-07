@@ -94,8 +94,8 @@ Opcao9 () {
 
 Opcao10 () {
     clear
-    wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/Slowdns/update
-    chmod +x update
+    wget https://raw.githubusercontent.com/Tarap-Kuhing/SLDNS/main/Slowdns/install-sldns.sh
+    chmod +x install-sldns
     bash update
 }
 
