@@ -1,5 +1,5 @@
 #!/bin/bash
-# SL
+# Mod By TARAP KUHING
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -10,16 +10,19 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
-# ==========================================
+#\033[0;31m====================================================\033[0;31m
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl ipinfo.io/ip | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/Tarap-Kuhing/perizinan/main/ipvps.txt | grep $MYIP )
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Fuck You!!"
+echo -e "${NC}${LIGHT}Please Contact Admin Dulu!!!!!!"
+echo -e "${NC}${LIGHT}Facebook : NO"
+echo -e "${NC}${LIGHT}WhatsApp : 085754292950"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/Hendra2012"
 exit 0
 fi
 clear
@@ -49,27 +52,27 @@ sed -i '/#xray-vless-tls$/a\#### '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#xray-vless-nontls$/a\#### '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
-xrayvless1="vless://${uuid}@${domain}:$tls?path=/vless/&security=tls&encryption=none&type=ws#${user}"
-xrayvless2="vless://${uuid}@${domain}:$nontls?path=/vless/&encryption=none&type=ws#${user}"
+xrayvless1="vless://${uuid}@${domain}:$tls?path=/vless&security=tls&encryption=none&type=ws#${user}"
+xrayvless2="vless://${uuid}@${domain}:$nontls?path=/vless&encryption=none&type=ws#${user}"
 systemctl restart xray.service
 service cron restart
 clear
 echo -e ""
-echo -e "======-XRAYS/VLESS-======"
-echo -e "Remarks     : ${user}"
-echo -e "IP/Host     : ${MYIP}"
-echo -e "Address     : ${domain}"
-echo -e "Port TLS    : $tls"
-echo -e "Port No TLS : $nontls"
-echo -e "User ID     : ${uuid}"
-echo -e "Encryption  : none"
-echo -e "Network     : ws"
-echo -e "Path        : /vless"
-echo -e "Created     : $hariini"
-echo -e "Expired     : $exp"
-echo -e "========================="
-echo -e "Link TLS    : ${xrayvless1}"
-echo -e "========================="
-echo -e "Link No TLS : ${xrayvless2}"
-echo -e "========================="
-echo -e "Script Mod By TARAP KUHING"
+echo -e "\033[0;31m===========-XRAYS/VLESS-===========\033[0;31m"
+echo -e "\033[0;34mRemarks     : ${user}\033[0;34m"
+echo -e "\033[0;34mIP/Host     : ${MYIP}\033[0;34m"
+echo -e "Address               : ${domain}\033[0;34m"
+echo -e "\033[0;34mPort TLS    : $tls\033[0;34m"
+echo -e "\033[0;34mPort No TLS : $nontls\033[0;34m"
+echo -e "\033[0;34mUser ID     : ${uuid}\033[0;34m"
+echo -e "\033[0;34mEncryption  : none\033[0;34m"
+echo -e "\033[0;34mNetwork     : ws\033[0;34m"
+echo -e "\033[0;34mPath        : /vless\033[0;34m"
+echo -e "\033[0;34mCreated     : $hariini"
+echo -e "\033[0;34mExpired     : $exp\033[0;34m"
+echo -e "\033[0;31m===================================\033[0;31m"
+echo -e "\033[1;33mLink TLS    : ${xrayvless1}\033[1;33m"
+echo -e "\033[0;31m===================================\033[0;31m"
+echo -e "\033[1;33mLink No TLS : ${xrayvless2}\033[1;33m"
+echo -e "\033[0;31m=============================================\033[0;31m"
+echo -e "\033[0;33mScript By TARAP KUHING\033[0;33m"
