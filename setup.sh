@@ -52,7 +52,7 @@ exit 0
 fi
 mkdir /var/lib/crot;
 echo "IP=" >> /var/lib/tarapkuhing/ipvps.conf
-wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/slhost.sh && chmod +x slhost.sh && ./slhost.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
 #install xray
 wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/xray/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
 #install ssh ovpn
@@ -172,6 +172,7 @@ echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""
 echo "   - Install Script VPS Mod By TARAP KUHING....SELESAI...."
+echo ""
 echo " Reboot 15 Sec"
 sleep 15
 rm -f setup.sh
