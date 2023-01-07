@@ -1,7 +1,7 @@
 #!/bin/bash
-# Mod By SL
+# Mod By TARAP KUHING
 # =====================================================
-source /var/lib/crot/ipvps.conf
+source /var/lib/tarapkuhing/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
