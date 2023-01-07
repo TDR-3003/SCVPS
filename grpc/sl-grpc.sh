@@ -1,6 +1,6 @@
 #!/bin/bash
 # XRay Installation
-# SL Script
+# TARAP KUHING
 # ==================================
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
