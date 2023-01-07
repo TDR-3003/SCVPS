@@ -653,8 +653,8 @@ END
 # / / Installation V2Ray Service
 cat > /etc/systemd/system/xray@.service << END
 [Unit]
-Description=Xray Service ( %i ) By gandring
-Documentation=https://raw.githubusercontent.com/Gandring15/vps/main/
+Description=Xray Service ( %i ) By TARAP KUHING
+Documentation=https://t.me/Hendra2012
 After=network.target nss-lookup.target
 
 [Service]
@@ -801,22 +801,18 @@ END
 # Installing Trojan Go Service
 cat > /etc/systemd/system/trojan-go.service << END
 [Unit]
-Description=Trojan-Go Service By gandring
-Documentation=https://github.com/Gandring15/vps/main/
-Documentation=https://github.com/Gandring15/vps/main/
+Description=Trojan-Go Service By TARAP KUHING
+Documentation=https://t.me/Hendra2012
 After=network.target nss-lookup.target
 
 [Service]
-Type=simple
-StandardError=journal
-PIDFile=/etc/trojan-go/trojan-go.pid
+User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
 ExecStart=/usr/local/bin/trojan-go -config /etc/trojan-go/config.json
-LimitNOFILE=65535
 Restart=on-failure
-RestartSec=1s
+RestartPreventExitStatus=23
 
 [Install]
 WantedBy=multi-user.target
