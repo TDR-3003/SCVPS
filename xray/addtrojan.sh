@@ -1,5 +1,5 @@
 #!/bin/bash
-# SL
+# Mod By TARAP KUHING
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -10,16 +10,19 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
-# ==========================================
+#\033[0;31m====================================================\033[0;31m
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl ipinfo.io/ip | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/Tarap-Kuhing/perizinan/main/ipvps.txt | grep $MYIP )
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Fuck You!!"
+echo -e "${NC}${LIGHT}Please Contact Tarap Kuhing!!"
+echo -e "${NC}${LIGHT}Facebook : NO"
+echo -e "${NC}${LIGHT}WhatsApp : 085754292950"
+echo -e "${NC}${LIGHT}Telegram : NO"
 exit 0
 fi
 clear
@@ -50,15 +53,15 @@ trojanlink="trojan://${user}@${domain}:${tr}"
 service cron restart
 clear
 echo -e ""
-echo -e "======-XRAYS/TROJAN-======"
-echo -e "Remarks  : ${user}"
-echo -e "IP/Host  : ${MYIP}"
-echo -e "Address  : ${domain}"
-echo -e "Port     : ${tr}"
-echo -e "Key      : ${user}"
-echo -e "Created  : $hariini"
-echo -e "Expired  : $exp"
-echo -e "=========================="
-echo -e "Link TR  : ${trojanlink}"
-echo -e "=========================="
-echo -e "Script Mod By TARAP KUHING"
+echo -e "\033[0;31m===========-XRAYS/TROJAN-===========\033[0;31m"
+echo -e "\033[0;34mRemarks  : ${user}\033[0;34m"
+echo -e "\033[0;34mIP/Host  : ${MYIP}\033[0;34m"
+echo -e "\033[0;34mAddress  : ${domain}\033[0;34m"
+echo -e "\033[0;34mPort     : ${tr}\033[0;34m"
+echo -e "\033[0;34mKey      : ${user}\033[0;34m"
+echo -e "\033[0;34mCreated  : $hariini\033[0;34m"
+echo -e "\033[0;34mExpired  : $exp\033[0;34m"
+echo -e "\033[0;31m====================================\033[0;31m"
+echo -e "\033[1;33mLink TR  : ${trojanlink}\033[1;33m"
+echo -e "\033[0;31m====================================\033[0;31m"
+echo -e "\033[1;33mScript By TARAP KUHING\033[1;33m"
