@@ -1,5 +1,5 @@
 #!/bin/bash
-# SL
+# TARAP KUHING
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -66,7 +66,7 @@ make
 cpack -G DEB
 dpkg -i accel-ppp.deb
 mv /etc/accel-ppp.conf.dist /etc/accel-ppp.conf
-wget -O /etc/accel-ppp.conf "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/sstp/accel.conf"
+wget -O /etc/accel-ppp.conf "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/sstp/accel.conf"
 sed -i $MYIP2 /etc/accel-ppp.conf
 chmod +x /etc/accel-ppp.conf
 systemctl start accel-ppp
