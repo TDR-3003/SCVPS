@@ -50,7 +50,7 @@ if [ -f "/etc/xray/domain" ]; then
 echo "Script Already Installed"
 exit 0
 fi
-mkdir /var/lib/crot;
+mkdir /var/lib/tarapkuhing;
 echo "IP=" >> /var/lib/tarapkuhing/ipvps.conf
 wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
 #install xray
