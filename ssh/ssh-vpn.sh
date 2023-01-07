@@ -423,7 +423,7 @@ wget -O deltrgo "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/troja
 wget -O renewtrgo "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/trojango/renewtrgo.sh"
 wget -O cektrgo "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/trojango/cektrgo.sh"
 wget -O portsshnontls "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/websocket/portsshnontls.sh"
-wget -O portsshws "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/websocket/portsshws.sh"
+wget -O portsshws "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/websocket/portsshws.sh"
 
 wget -O ipsaya "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/update/ipsaya.sh"
 wget -O sshovpnmenu "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/update/sshovpn.sh"
