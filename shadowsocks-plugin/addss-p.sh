@@ -1,5 +1,5 @@
 #!/bin/bash
-# SL
+# TARAP KUHING
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -155,7 +155,7 @@ gosth2=4922
 else
 gosth2="$((blastport3+1))"
 fi
-source /var/lib/crot/ipvps.conf
+source /var/lib/tarapkuhing/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
