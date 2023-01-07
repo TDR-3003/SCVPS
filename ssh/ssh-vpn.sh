@@ -37,10 +37,11 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=infinity
-organizationalunit=infinity
-commonname=localhost
-email=hayuk69@gmail.com
+organization=akbarstorevpn
+organizationalunit=akbarstorevpn
+commonname=akbarstorevpn
+email=akbarssh21@gmail.com
+
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/password"
@@ -403,10 +404,10 @@ wget -O swapkvm "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/s
 wget -O addvmess "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/xray/addv2ray.sh"
 wget -O addvless "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/xray/addvless.sh"
 wget -O addtrojan "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/xray/addtrojan.sh"
-wget -O addgrpc "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/xray/addgrpc.sh"
-wget -O cekgrpc "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/xray/cekgrpc.sh"
-wget -O delgrpc "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/xray/delgrpc.sh"
-wget -O renewgrpc "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/xray/renewgrpc.sh"
+wget -O addgrpc "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/grpc/addgrpc.sh"
+wget -O cekgrpc "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/grpc/cekgrpc.sh"
+wget -O delgrpc "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/grpc/delgrpc.sh"
+wget -O renewgrpc "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/grpc/renewgrpc.sh"
 wget -O delvmess "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/xray/delv2ray.sh"
 wget -O delvless "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/xray/delvless.sh"
 wget -O deltrojan "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/xray/deltrojan.sh"
