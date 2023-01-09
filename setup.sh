@@ -82,7 +82,7 @@ wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/SLDNS/install-sld
 # install xray grpc
  wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/grpc/xray-grpc.sh && chmod +x xray-grpc.sh && screen -S xray-grpc ./xray-grpc.sh
 # install shadowsocks plugin
- wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/shadowsocks-plugin/install-ss-plugin.sh && chmod +x install-ss-plugin.sh && ./install-ss-plugin.sh
+ #wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/shadowsocks-plugin/install-ss-plugin.sh && chmod +x install-ss-plugin.sh && ./install-ss-plugin.sh
 
 
 rm -f /root/ssh-vpn.sh
