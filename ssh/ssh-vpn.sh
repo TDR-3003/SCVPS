@@ -154,6 +154,14 @@ chown -R www-data:www-data /home/vps/public_html
 chmod -R g+rw /home/vps/public_html
 cd /home/vps/public_html
 wget -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/index.html1"
+systemctl stop nginx
+rm -rf /etc/nginx/conf.d/alone.conf
+# STOP
+/etc/init.d/nginx stop
+mkdir -p /home/vps/public_html
+# U
+chown -R www-data:www-data /home/vps/public_html
+# U
 ## Setting nginx config
 cat >/etc/nginx/conf.d/xray.conf <<EOF
     server {
@@ -272,6 +280,7 @@ sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 systemctl daemon-reload
 sleep 1
 systemctl restart nginx
+
 
 cd
 
