@@ -155,7 +155,6 @@ chmod -R g+rw /home/vps/public_html
 cd /home/vps/public_html
 wget -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/index.html1"
 /etc/init.d/nginx restart
-
 cd
 
 # install badvpn
