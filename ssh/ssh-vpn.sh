@@ -385,6 +385,8 @@ wget -O cekssh "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/ce
 wget -O restart "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/restart.sh"
 wget -O speedtest "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/speedtest_cli.py"
 wget -O info "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/info.sh"
+wget -O status "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/status.sh
+wget -O status2 "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/status2.sh
 wget -O ram "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/ram.sh"
 wget -O renewssh "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/renewssh.sh"
 wget -O autokill "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/autokill.sh"
@@ -481,6 +483,8 @@ chmod +x cekssh
 chmod +x restart
 chmod +x speedtest
 chmod +x info
+chmod +x status
+chmod +x status2
 chmod +x about
 chmod +x autokill
 chmod +x tendang
