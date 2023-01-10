@@ -426,8 +426,8 @@ wget -O portsshnontls "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main
 wget -O portsshws "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/websocket/portsshws.sh"
 
 wget -O ipsaya "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/update/ipsaya.sh"
-wget -O status "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/status.sh"
-wget -O status2 "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/status2.sh"
+wget -O status "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/update/status.sh"
+wget -O status2 "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/update/status2.sh"
 wget -O sshovpnmenu "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/update/sshovpn.sh"
 wget -O l2tpmenu "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/update/l2tpmenu.sh"
 wget -O pptpmenu "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/update/pptpmenu.sh"
