@@ -385,8 +385,6 @@ wget -O cekssh "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/ce
 wget -O restart "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/restart.sh"
 wget -O speedtest "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/speedtest_cli.py"
 wget -O info "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/info.sh"
-wget -O status "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/status.sh
-wget -O status2 "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/status2.sh
 wget -O ram "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/ram.sh"
 wget -O renewssh "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/renewssh.sh"
 wget -O autokill "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/autokill.sh"
@@ -428,6 +426,8 @@ wget -O portsshnontls "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main
 wget -O portsshws "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/websocket/portsshws.sh"
 
 wget -O ipsaya "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/update/ipsaya.sh"
+wget -O status "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/status.sh"
+wget -O status2 "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/status2.sh"
 wget -O sshovpnmenu "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/update/sshovpn.sh"
 wget -O l2tpmenu "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/update/l2tpmenu.sh"
 wget -O pptpmenu "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/update/pptpmenu.sh"
@@ -449,6 +449,8 @@ wget -O sl-fix "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/sslh-f
 
 chmod +x sl-fix
 chmod +x ipsaya
+chmod +x status
+chmod +x status2
 chmod +x sshovpnmenu
 chmod +x l2tpmenu
 chmod +x pptpmenu
@@ -483,8 +485,6 @@ chmod +x cekssh
 chmod +x restart
 chmod +x speedtest
 chmod +x info
-chmod +x status
-chmod +x status2
 chmod +x about
 chmod +x autokill
 chmod +x tendang
