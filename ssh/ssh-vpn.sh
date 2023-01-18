@@ -383,7 +383,7 @@ wget -O member "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/me
 wget -O delexp "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/delexp.sh"
 wget -O cekssh "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/cekssh.sh"
 wget -O restart "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/restart.sh"
-wget -O issue "https://https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/issue.net"
+wget -O issue "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/issue.net"
 wget -O speedtest "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/speedtest_cli.py"
 wget -O info "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/info.sh"
 wget -O ram "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/ram.sh"
