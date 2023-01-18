@@ -14,16 +14,16 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 # ==================================================
 # Link Hosting Kalian
-tarapkuhing="raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh"
+tarapkuhing="raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/ssh"
 
 # Link Hosting Kalian Untuk Xray
-tarapkuhing="raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/xray"
+tarapkuhing="raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/xray"
 
 # Link Hosting Kalian Untuk Trojan Go
-tarapkuhing="raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/trojango"
+tarapkuhing="raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/trojango"
 
 # Link Hosting Kalian Untuk Stunnel5
-tarapkuhing="raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/stunnel5"
+tarapkuhing="raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/stunnel5"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -42,9 +42,8 @@ organizationalunit=akbarstorevpn
 commonname=akbarstorevpn
 email=akbarssh21@gmail.com
 
-
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/ssh/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -94,7 +93,6 @@ apt-get remove --purge exim4 -y
 
 # install wget and curl
 apt -y install wget curl
-apt -y install net-tools
 
 # Install Requirements Tools
 apt install ruby -y
@@ -159,7 +157,7 @@ cd
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/ssh/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -167,28 +165,29 @@ sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-c
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
-
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7400 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7500 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7600 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7700 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 
 # setting port ssh
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 2253' /etc/ssh/sshd_config
-echo "Port 22" >> /etc/ssh/sshd_config
-echo "Port 42" >> /etc/ssh/sshd_config
-/etc/init.d/ssh restart
 
 # install dropbear
 apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 1153"/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
 
-# install squid (proxy nya aku matikan)
+# install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/ssh/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # Install SSLH
@@ -199,7 +198,6 @@ rm -f /etc/default/sslh
 cat > /etc/default/sslh <<-END
 # Default options for sslh initscript
 # sourced by /etc/init.d/sslh
-
 # Disabled by default, to force yourself
 # to read the configuration:
 # - /usr/share/doc/sslh/README.Debian (quick start)
@@ -207,15 +205,11 @@ cat > /etc/default/sslh <<-END
 # - sslh(8) via "man sslh" for more configuration details.
 # Once configuration ready, you *must* set RUN to yes here
 # and try to start sslh (standalone mode only)
-
 RUN=yes
-
 # binary to use: forked (sslh) or single-thread (sslh-select) version
 # systemd users: don't forget to modify /lib/systemd/system/sslh.service
 DAEMON=/usr/sbin/sslh
-
 DAEMON_OPTS="--user sslh --listen 0.0.0.0:443 --ssl 127.0.0.1:777 --ssh 127.0.0.1:109 --openvpn 127.0.0.1:1194 --http 127.0.0.1:8880 --pidfile /var/run/sslh/sslh.pid -n"
-
 END
 
 # Restart Service SSLH
@@ -244,7 +238,7 @@ rm -rf /root/vnstat-2.6
 
 # install stunnel 5
 cd /root/
-wget -q -O stunnel5.zip "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/stunnel5.zip"
+wget -q -O stunnel5.zip "https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/stunnel5/stunnel5.zip"
 unzip -o stunnel5.zip
 cd /root/stunnel
 chmod +x configure
@@ -265,20 +259,15 @@ client = no
 socket = a:SO_REUSEADDR=1
 socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
-
 [dropbear]
 accept = 445
 connect = 127.0.0.1:109
-
 [openssh]
 accept = 777
 connect = 127.0.0.1:443
-
 [openvpn]
 accept = 990
 connect = 127.0.0.1:1194
-
-
 END
 
 # make a certificate
@@ -294,17 +283,15 @@ Description=Stunnel5 Service
 Documentation=https://stunnel.org
 Documentation=https://github.com/Akbar218
 After=syslog.target network-online.target
-
 [Service]
 ExecStart=/usr/local/bin/stunnel5 /etc/stunnel5/stunnel5.conf
 Type=forking
-
 [Install]
 WantedBy=multi-user.target
 END
 
 # Service Stunnel5 /etc/init.d/stunnel5
-wget -q -O /etc/init.d/stunnel5 "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/stunnel5.init"
+wget -q -O /etc/init.d/stunnel5 "https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/stunnel5/stunnel5.init"
 
 # Ubah Izin Akses
 chmod 600 /etc/stunnel5/stunnel5.pem
@@ -329,7 +316,7 @@ systemctl restart stunnel5
 /etc/init.d/stunnel5 restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/ssh/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -342,16 +329,34 @@ else
 	mkdir /usr/local/ddos
 fi
 clear
+echo; echo 'Installing DOS-Deflate 0.6'; echo
+echo; echo -n 'Downloading source files...'
+wget -q -O /usr/local/ddos/ddos.conf http://www.inetbase.com/scripts/ddos/ddos.conf
+echo -n '.'
+wget -q -O /usr/local/ddos/LICENSE http://www.inetbase.com/scripts/ddos/LICENSE
+echo -n '.'
+wget -q -O /usr/local/ddos/ignore.ip.list http://www.inetbase.com/scripts/ddos/ignore.ip.list
+echo -n '.'
+wget -q -O /usr/local/ddos/ddos.sh http://www.inetbase.com/scripts/ddos/ddos.sh
+chmod 0755 /usr/local/ddos/ddos.sh
+cp -s /usr/local/ddos/ddos.sh /usr/local/sbin/ddos
+echo '...done'
+echo; echo -n 'Creating cron to run script every minute.....(Default setting)'
+/usr/local/ddos/ddos.sh --cron > /dev/null 2>&1
+echo '.....done'
+echo; echo 'Installation has completed.'
+echo 'Config file is at /usr/local/ddos/ddos.conf'
+echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # banner /etc/issue.net
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 # Install BBR
-wget https://https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # Ganti Banner
-wget -O /etc/issue.net "https://https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/issue.net"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/Tarap-Kuhing/SCVPS/main/ssh/issue.net"
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
